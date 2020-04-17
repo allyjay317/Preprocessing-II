@@ -1,0 +1,33 @@
+.contactForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .radios{
+        display: flex;
+        
+        .radio_button{
+            
+            margin-right: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            p{
+                font-size: 1rem;
+                line-height: normal;
+            }
+        }
+    }
+    #contact-type {
+        padding-bottom: 20px;
+    }
+    .btn{
+        .bubble(25px, @eastern-blue, @white);
+        display: block;
+        text-decoration: none;
+        width: 100%;
+      }
+    
+}
+#description{
+    border-bottom: 2px dashed @navigation-border;
+}

@@ -1,0 +1,122 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Fun Bus Travel Agency - Solution</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Roboto" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+
+    <script>
+        function choiceChanged() {
+            var picked = document.getElementById("plan");
+            var description = document.getElementById("description");
+            if (picked.value == "sun") {
+                description.textContent = "Fun in the Sun Ea voluptate laborum ad ad sunt excepteur do incididunt nulla. Labore eiusmod quis amet laborum. Velit aliqua laborum esse veniam qui est reprehenderit Lorem. Est et exercitation deserunt cupidatat occaecat eiusmod ullamco labore mollit reprehenderit reprehenderit. Ad culpa anim in Lorem veniam dolore ipsum.";
+            }
+            if (picked.value == "mountain") {
+                description.textContent = "Mountain Excursion Do ex ipsum nostrud magna eu. Laboris consequat aliqua velit aliqua labore incididunt ea dolore. Consectetur minim excepteur magna ea commodo. Consectetur officia duis voluptate laboris incididunt consequat. Enim minim enim nisi culpa. Aute pariatur voluptate exercitation veniam esse sit sunt consectetur magna cillum aute consectetur. Nisi ex ad sint irure exercitation sint nulla minim elit qui duis magna culpa labore.";
+            }
+            if (picked.value == "island") {
+                description.textContent = "Island Getaway Qui nostrud aliqua ea irure in duis Lorem. Aliqua non nostrud officia sunt in Lorem reprehenderit consequat ullamco culpa deserunt ut proident cupidatat. Est aute ex amet aute quis duis do sunt. Labore esse magna aliquip officia minim sit sunt velit dolore nostrud veniam sit adipisicing occaecat. Aliqua velit sint aute labore magna esse deserunt exercitation.";
+            }
+
+        };
+        function sel_email(){
+            document.getElementById("contact-type").innerHTML ="Email  <input type='email'>";
+        }
+        function sel_telephone(){
+            document.getElementById("contact-type").innerHTML ="Telephone Number  <input type='tel'>";
+        }
+        function sel_yes(){
+            document.getElementById("special-instructions").innerHTML ="<textarea>";
+        }
+        function sel_no(){
+            document.getElementById("special-instructions").innerHTML ="";
+        }
+
+
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+
+
+    <nav class="container">
+        <h1>
+            Fun Bus
+        </h1>
+        <div class="links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+    <header class="container">
+        <img src="img/fun-bus.jpg">
+        <h2>
+            Order the Fun Bus!
+        </h2>
+        <p>
+            Place your order here!
+        </p>
+    </header>
+    <div class="container">
+        <select id="plan" onchange="choiceChanged()">
+            <option value="sun">Fun in the Sun</option>
+            <option value="mountain">Mountain Excursion</option>
+            <option value="island">Island Getaway</option>
+        </select>
+        <p id="description">
+            Fun in the Sun Ea voluptate laborum ad ad sunt excepteur do incididunt nulla. Labore eiusmod quis amet
+            laborum. Velit aliqua laborum esse veniam qui est reprehenderit Lorem. Est et exercitation deserunt
+            cupidatat occaecat eiusmod ullamco labore mollit reprehenderit reprehenderit. Ad culpa anim in Lorem veniam
+            dolore ipsum.
+        </p>
+        <div class="contactForm">
+            <p>Name</p>
+            <input type="text">
+            <div class="radios">
+                <div class="radio_button">
+                    <p>Telephone<p>
+                            <input type="radio" id="telephone" onclick="sel_telephone()" name="contact_group">
+                </div>
+                <div class="radio_button">
+                    <p>Email</p>
+                    <input type="radio" id="email" onclick="sel_email()" name="contact_group">
+                </div>
+
+            </div>
+            <div id="contact-type"></div>
+
+            <p>Leave special instructions?</p>
+            <div class="radios">
+                <div class="radio_button">
+                    <p>Yes<p>
+                            <input type="radio" id="siYes" onclick="sel_yes()" name="si_group">
+                </div>
+                <div class="radio_button">
+                    <p>No</p>
+                    <input type="radio" id="siNo" onclick="sel_no()" name="si_group">
+                </div>
+
+            </div>
+            <div id="special-instructions"></div>
+
+            <a href="#" class="btn">Order Now!</a>
+            
+        </div>
+        
+
+    </div>
+</body>
+
+</html>
