@@ -8,10 +8,22 @@ nav{
     padding-bottom: 30px;
     align-items: center;
     border-bottom: 2px dashed @navigation-border;
+
+    @media @mobile{
+        flex-direction: column;
+        padding-bottom: 0px;
+        
+    }
+
     h1{
         font-weight: 1000;
     }
     .links{
+        @media @mobile{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
         a{
             line-height: 1.5;
             font-size: 1.6rem;
@@ -19,6 +31,15 @@ nav{
             margin-right: 20px;
             text-decoration: none;
             color: black;
+            .shadowOnHover(gray, 1px);
+
+            @media @mobile{
+                margin-right: 0px;
+                flex-grow: 1;
+                text-align: center;
+            }
+            
+            
             &:last-child{
                 margin-right: auto;
             }

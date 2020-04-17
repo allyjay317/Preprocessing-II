@@ -9,3 +9,16 @@
     padding-bottom: 10px;
     padding-top: 10px;
 }
+
+.mobileWidth(){
+    @media @mobile {
+        width: 100%;
+      }
+}
+
+.shadowOnHover(@color, @length){
+    &:hover{
+        text-shadow: @length @length @color;
+        transition: text-shadow 0.3s ease-in-out;
+    }
+}
